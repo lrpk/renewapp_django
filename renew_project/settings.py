@@ -35,6 +35,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "cart",
     "store",
     "accounts",
     "category",
@@ -71,6 +72,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'category.context_processors.menu_links',  # створено кастомний процесор в файлі context_processor.py
+                'cart.context_processors.counter',  # розрахунок кількості товарів в корзині
             ],
         },
     },
